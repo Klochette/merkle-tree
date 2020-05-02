@@ -1,0 +1,20 @@
+@import "./config/reset.scss";
+@import "./config/fonts.scss";
+@import "./config/mixin.scss";
+@import "./config/variables.scss";
+@import "./config/global.scss";
+
+@import "./blocs/hero.scss";
+@import "./blocs/data.scss";
+@import "./blocs/leavesAndMerkle.scss";
+
+.workInProgress {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  font-family: "Roboto-Light";
+  font-size: $h1;
+}

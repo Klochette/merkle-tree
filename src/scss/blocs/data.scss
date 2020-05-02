@@ -1,0 +1,97 @@
+.data {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include big-screen {
+    width: 50%;
+    padding-left: 30px;
+  }
+
+  &__level {
+    border: 1px solid $borders;
+    border-radius: 8px;
+    padding: 16px 16px 0 16px;
+    margin-bottom: 16px;
+
+    &--names {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &--arrow {
+      background: center / contain no-repeat
+        url(./../assets/img/arrow-select.svg);
+      width: 18px;
+      height: 8px;
+      transform: translateY(2px);
+    }
+
+    &--cross {
+      background: center / contain no-repeat
+        url(./../assets/img/cross-close-green.svg);
+      width: 18px;
+      height: 12px;
+      transform: translateY(2px);
+    }
+  }
+
+  &__container {
+    background-color: $secondary-dark;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  &__title {
+    background-color: $primary;
+    font-family: $label-font;
+    font-size: $label;
+    max-width: 157px;
+    padding: 5px 0 5px 20px;
+    margin-bottom: 29px;
+    border-radius: 0px 4px 4px 0px;
+    letter-spacing: 0.1rem;
+    color: $secondary-lighter;
+  }
+
+  &__content {
+    padding: 0 26px;
+
+    &--texts {
+      color: $secondary-lighter;
+    }
+
+    &--margin {
+      padding-bottom: 16px;
+    }
+
+    &--select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      appearance: none;
+      background-image: url("./../assets/img/arrow-select.svg");
+      background-size: 1em;
+      background-repeat: no-repeat;
+      background-position: calc(100% - 10px) center;
+      background-color: $secondary-darker;
+      border-color: $borders;
+      font-family: $body-font;
+      letter-spacing: 0.05rem;
+      width: 100%;
+      height: 48px;
+      border-radius: 8px;
+      padding: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

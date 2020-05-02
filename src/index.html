@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/img/tree-logo.png" />
+    <link rel="stylesheet" href="./scss/style.scss" />
+    <script defer src="./js/explanation.js"></script>
+    <script defer src="./js/script.js"></script>
+    <title>Merkel Land</title>
+  </head>
+  <body>
+    <section class="hero">
+      <a href="index.html">
+      <img
+        src="./assets/img/tree-logo.png"
+        alt="tree logo"
+        class="hero__logo"
+      />
+      </a>
+      <div class="hero__text">
+        <h1 class="hero__text--title">Welcome to Merkle Land</h1>
+        <p class="hero__text--description">Create your Merkle Tree solution
+          in a few seconds.</p>
+      </div>
+    </section>
+    <main class="all__sections">
+    <section class="leavesAndMerkle">
+      <div class="merkleTree">
+        <div class="merkleTree__presentation">
+          <h2 class="merkleTree__presentation--title">What's a Merkle Tree ?</h2>
+          <div class="merkleTree__presentation--arrow"></div>
+        </div>
+        <p class="merkleTree__description"></p>
+        </div>
+    <div class="leaves">
+      <h2 class="leaves__title">Your leaves</h2>
+      <form class="leaves__form" id="formTree">
+        <p class="leaves__form--description">Enter here the number of leaves you want to input :</p>
+        <div class="leaf__inputs">
+        <input class="leaf__input" type="number" required="required" min="1" id="numberOfInputs" />
+        <input class="leaf__cta" type="submit" value="Submit" id="submitButton" />
+      </div>
+      </form>
+      </div>
+  </section>
+  <section class="data">
+    <div class="data__container">
+      <p class="data__title">Your Merkle Tree</p>
+      <div class="data__content">
+        <h2 class="data__content--title data__content--margin">Your final hash is :</h2>
+        <p id="root" class="data__content--texts data__content--margin">Please, enter your leaves before seing a value here.</p>
+      </div>
+    </div>
+    <div class="data__container">
+      <p class="data__title">Levels</p>
+      <div class="data__content">
+      <h2 id="levels" class="data__content--title data__content--margin">Your tree has no level.</h2>
+  </section>
+</main>
+  </body>
+</html>

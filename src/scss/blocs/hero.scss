@@ -1,0 +1,32 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  @include big-screen {
+    flex-direction: row;
+  }
+
+  &__logo {
+    width: 144px;
+
+    @include big-screen {
+      margin-right: 50px;
+    }
+  }
+
+  &__text {
+    &--title {
+      margin-top: 32px;
+
+      @include big-screen {
+        font-size: 2.7rem;
+      }
+    }
+
+    &--description {
+      width: 90%;
+      margin-top: 16px;
+      color: $secondary-light;
+    }
+  }
+}

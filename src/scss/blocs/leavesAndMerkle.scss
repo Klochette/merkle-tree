@@ -1,0 +1,142 @@
+.leavesAndMerkle {
+  display: flex;
+  flex-direction: column;
+
+  @include big-screen {
+    width: 50%;
+    padding-right: 30px;
+    align-self: start;
+  }
+
+  .leaves {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__form {
+      display: flex;
+      margin-bottom: 32px;
+      flex-direction: column;
+
+      &--container {
+        border: 1px solid $borders;
+        padding: 32px 32px 16px 16px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+
+        @include big-screen {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+
+      &--description {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .leaf {
+    display: flex;
+    margin-bottom: 16px;
+    width: 100%;
+    align-items: center;
+
+    @include big-screen {
+      &__container {
+        margin-left: 16px;
+        width: 40%;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      margin-right: 16px;
+      height: 48px;
+      border: 1px solid $borders;
+      border-radius: 8px;
+      background-color: $tertiary;
+      padding: 10px;
+      color: $secondary-light;
+      font-family: $body-font;
+      letter-spacing: 0.05rem;
+      font-size: $body;
+      margin-bottom: 16px;
+    }
+
+    &__cta {
+      min-width: 260px;
+      font-family: $cta-font;
+      font-size: $cta;
+      color: $secondary-lighter;
+      background-color: $primary;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 16px;
+      transition: all 0.3s;
+      border: none;
+
+      &:hover {
+        background-color: $primary-hover;
+        //transform: scale(1.02);
+        transform: translateY(3px);
+        cursor: pointer;
+      }
+    }
+
+    &__display {
+      margin-bottom: 16px;
+    }
+  }
+
+  .merkleTree {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    border: 1px solid $borders;
+    padding: 25px 34px;
+    border-radius: 8px;
+
+    &__description {
+      width: 95%;
+
+      &--margin {
+        margin-top: 16px;
+      }
+    }
+
+    &__presentation {
+      display: flex;
+      justify-content: space-between;
+      &:hover {
+        cursor: pointer;
+      }
+
+      &--arrow {
+        background: center / contain no-repeat
+          url(./../assets/img/arrow-select.svg);
+        width: 18px;
+        height: 8px;
+        transform: translateY(2px);
+      }
+
+      &--cross {
+        background: center / contain no-repeat
+          url(./../assets/img/cross-close-green.svg);
+        width: 18px;
+        height: 12px;
+        transform: translateY(2px);
+      }
+    }
+  }
+}

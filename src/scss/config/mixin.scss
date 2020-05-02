@@ -1,0 +1,5 @@
+@mixin big-screen() {
+  @media screen and (min-width: 750px) {
+    @content;
+  }
+}
