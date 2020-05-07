@@ -150,7 +150,7 @@ class MerkleTree {
 // FORM SCRIPTS
 
 // ADD HTML FOR THE LEVEL CHOOSED
-function levelDescription(myMerkle, i) {
+function levelDescription(myMerkle) {
   let levels = document.querySelectorAll(".data__level");
   for (let i = 0; i < levels.length; i++) {
     let level = levels[i];
@@ -188,36 +188,34 @@ function levelDescription(myMerkle, i) {
 }
 
 // SECOND SUBMIT, CHANGES THE FORM A SECOND TIME
-function finishForm(tab, myForm) {
-  let myMerkle = new MerkleTree(tab);
-  let rootMyMerkle = document.getElementById("root");
-  let levelMyMerkle = document.getElementById("levels");
-  let height;
-  let addInnerHtml = "";
-
+function finishForm(tab, swap, myForm) {
+  swap = "";
   for (let j = 0; j < tab.length; j++) {
-    addInnerHtml =
-      addInnerHtml +
+    swap =
+      swap +
       "<div class='leaf__container'><h3 class='leaf__display--title'>Leaf " +
       (j + 1) +
       "</h3><p class='leaf__display'>" +
-      addInnerHtml[j] +
+      tab[j] +
       "</p></div>";
   }
-  myForm.innerHTML =
-    "<div class='leaves__form--container'>" + addInnerHtml + "</div>";
+  myForm.innerHTML = "<div class='leaves__form--container'>" + swap + "</div>";
+  let myMerkle = new MerkleTree(tab);
+  let rootMyMerkle = document.getElementById("root");
+  let levelMyMerkle = document.getElementById("levels");
+  let i = 0;
   rootMyMerkle.innerHTML = myMerkle.root();
   levelMyMerkle.innerHTML =
     "Your tree contains " + myMerkle.height() + " levels.";
-  for (height = myMerkle.height(); height > 0; height--) {
+  for (i = myMerkle.height(); i > 0; i--) {
     levelMyMerkle.insertAdjacentHTML(
       "afterend",
       '<div class="data__level"><div class="data__level--names"><h2 class="data__level--number">Level ' +
-        height +
+        i +
         "</h2><div class='data__level--arrow'></div></div><div class='data__level--array'></div></div>"
     );
   }
-  levelDescription(myMerkle, height);
+  levelDescription(myMerkle);
 }
 
 // CHANGE THE FORM OF THE HOMEPAGE
@@ -230,7 +228,7 @@ function changeForm() {
     for (let i = 0; i < nbInputs; i++) {
       swap =
         swap +
-        "<input class='leaf__input' type='text' placeholder='leaf " +
+        "<input class='leaf__input' required='required' type='text' placeholder='leaf " +
         (i + 1) +
         "' id='" +
         i +
@@ -253,5 +251,4 @@ function changeForm() {
     return false;
   };
 }
-
 changeForm();

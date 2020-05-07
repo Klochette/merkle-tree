@@ -1,21 +1,15 @@
-Install Parcel for SCSS:
+### Install Parcel for SCSS & SHA256 dependencies
 
       npm install parcel-bundler --save-dev
-      
-_Parcel is a blazing fast, zero configuration web application bundler_
-
-Install SHA256 dependencies:
-
       npm install js-sha256
-<sub><sub><sub>source https://github.com/emn178/js-sha256</sub></sub></sub>
 
-Launch with :
+<sub><sub><sub>source SHA265 https://github.com/emn178/js-sha256</sub></sub></sub>
+
+### Launch with :
       
       npm run dev
 
-
-To Do :
-- Refactoring JS
+---
 
 # The Merkle Tree on the Web
 
